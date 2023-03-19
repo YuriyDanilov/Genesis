@@ -1,0 +1,86 @@
+.lessons {
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(2, auto);
+	grid-template-areas:
+		'a a'
+		'b c'
+		'b c';
+	position: relative;
+}
+
+.lessons button {
+	position: absolute;
+	top: -43px;
+	right: 0;
+	background-color: #136eac;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.lessons h3 {
+	color: #136eac;
+	margin-bottom: 30px;
+	grid-area: a;
+}
+
+.player {
+	grid-area: b;
+	justify-self: center;
+	align-self: start;
+}
+
+.lessons_list {
+	grid-area: c;
+}
+.lessons_list {
+	max-width: 350px;
+	border: 1px solid #cabe5f;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.lessons_list li {
+	display: flex;
+	align-items: flex-end;
+	cursor: pointer;
+	position: relative;
+	padding: 5px 5px 5px 5px;
+}
+
+.lessons_list li:hover,
+.active {
+	background-color: #cabe5f;
+}
+
+.lessons_list img {
+	width: 100px;
+	border-radius: 5px;
+}
+
+.lessons_list p {
+	margin-left: 10px;
+}
+
+.lessons_list li span {
+	position: absolute;
+	bottom: 8px;
+	left: 79px;
+	color: #fff;
+	font-size: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+	.lessons {
+		grid-template-areas:
+			'a a'
+			'b b'
+			'c c';
+		gap: 20px;
+		justify-items: center;
+		align-items: center;
+	}
+}
